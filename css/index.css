@@ -1,3 +1,58 @@
 .main{
     margin:0 auto;
 }
+.van-swipe{
+    height:50px;
+    width:300px;
+    border:1px solid black;
+}
+.list{
+    display:flex;
+    justify-content:space-between;
+    border:1px solid black;
+}
+.card{
+    border:1px solid black;
+}
+.van-popup{
+    width:350px;
+    height:300px;
+}
+.content{
+    width:200px;
+    height:150px;
+    background:#ff0000;
+    margin:0 auto;
+}
+.card{
+    width:5px;
+    height:5px;
+    background:#ff0000;
+}
+.img-list{
+    width:600px;
+    height:300px;
+    border:1px solid red;
+}
+#hong{
+    background:red;
+}
+#gre{
+    background:green
+}
+#lan{
+    background:blue;
+}
+.page{
+    display:flex;
+}
+.page>li{
+    margin:10px;
+    width:20px;
+    height:20px;
+    border:1px solid black;
+   
+}
+.active{
+     background:red;
+}

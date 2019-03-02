@@ -5,10 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@1.6/lib/index.css">
+    
 </head>
 <body>
-    <div class="Main">
-        test
+<div class="main">
+ <ul v-for="(item,i) in  Math.ceil(Mydata.length/2)">
+       <li v-for="(as,index) in Mydata" v-if="index<i+2"><span>{{index}}</span>
+        <span>{{i}}</span></li>
+   </ul>
+
+
+
+
+
+
+
+
+  
+
+
+<div v-for="(item,i) in  Math.ceil(mylist.length/2)" class="card">
+<ul>
+    <li>{{mylist[i*2]}}</li>
+</ul>
+<ul>
+    <li>{{mylist[i*2+1]}}</li>
+</ul>
+</div>
+
+<br>
+<br>
+<br>
+
+<van-swipe :autoplay="3000" vertical>
+        <van-swipe-item v-for="(item,i) in  Math.ceil(Mydata.length/2)">
+             <ul class="list" v-for="as in Mydata.slice(i*2,i*2+1)">
+                    <li>{{as.uname}}</li>
+                    <li>{{as.phone}}</li>
+                    <li>{{as.title}}</li>
+                    <li>{{as.sd}}</li>
+     
+</ul>
+<ul class="list" v-for="asd in Mydata.slice(i*2+1,i*2+2)">
+        <li>{{asd.uname}}</li>
+        <li>{{asd.phone}}</li>
+        <li>{{asd.title}}</li>
+        <li>{{asd.sd}}</li>
+
+</ul>
+</van-swipe-item>
+       
+   </van-swipe>
+<!--弹出层-->
+<button @click="popup()">显示弹出层窗口</button>
+<van-popup v-model="show">
+    Content
+</van-popup>
+<button @click="showpopup()">底部</button>
+    
+<van-popup v-model="isShow" position="bottom" :overlay="true">
+    <div class="van-content">
+        111111111111111111111
     </div>
+</van-popup>
+
+
+
+
+
+
+
+
+<van-swipe :autoplay="3000"  id="swipe">
+    <van-swipe-item>11111111111111</van-swipe-item>
+    <van-swipe-item>22222222222222</van-swipe-item>
+    <van-swipe-item>333333333333333</van-swipe-item>
+    
+</van-swipe>
+
+<br>
+<br>
+<br>
+<div class="img-list" :id="lists[a]">
+
+</div>
+<ul class="page">
+    <li v-for="(item,i) in lists" :class="a==i?'active':''"></li>
+</ul>
+<br>
+<br>
+<br>
+<div id="qrcode"></div>
+</div>
+   
+
+
+
+  
+   <script src="js/vue.js"></script>
+   <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+   <script src="http://cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js"></script>
+   <script src="js/index.js"></script>
 </body>
 </html>
